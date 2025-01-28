@@ -1,0 +1,33 @@
+clc;
+clear;
+close all;
+
+% Load the input color image
+input_img = imread('/MATLAB Drive/image.jpeg'); % Update with the correct image path
+gray_img = rgb2gray(input_img);    % Convert the image to grayscale
+
+% Get the dimensions of the grayscale image
+[height, width] = size(gray_img);
+
+% Create a figure to display the bit planes
+figure;
+set(gcf, 'Position', [100, 100, 1200, 800]); % Adjust figure window size
+
+% Loop through each bit from 1 to 8
+for bit_index = 1:8
+    % Extract the bit plane using the bitget function
+    bit_plane = bitget(gray_img, bit_index);
+    
+    % Convert the logical bit plane to uint8 for display purposes
+    bit_plane_display = uint8(bit_plane * 255);
+    
+    % Plot the bit plane in a subplot
+    subplot(2, 4, bit_index); % Display bit planes from least significant (1st bit) to most significant (8th bit)
+    imshow(bit_plane_display);
+    title(['Bit Plane ', num2str(bit_index)]);
+end
+
+% Display the original grayscale image
+figure;
+imshow(gray_img);
+title('Original Grayscale Image');
