@@ -5,7 +5,8 @@ This repository provides hands-on practical implementations of various digital i
 ## Included Practicals
 
 1. **Color Image Analysis and RGB Channel Visualization**
-2. **Histogram Equilization of Image**  
+2. **Histogram Equilization of Image**
+3. **bit plane slicing**
 
 ## Author
 Mithilesh Walde
