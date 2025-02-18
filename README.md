@@ -7,6 +7,7 @@ This repository provides hands-on practical implementations of various digital i
 1. **Color Image Analysis and RGB Channel Visualization**
 2. **Histogram Equilization of Image**
 3. **bit plane slicing**
+4. **Shannon Fano Compression**
 
 ## Author
 Mithilesh Walde
